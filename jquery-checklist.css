@@ -1,0 +1,159 @@
+/* 
+    jquery-Checklist v 0.1.0 - an simple checklist in dropdown
+        2014 Lackneets Chang 
+
+        lackneets@gmail.com
+        lackneets.tw
+ */
+
+.checklist {
+  background-color: white;
+  font-size: 13px;
+  border: 1px solid red;
+  width: 200px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #e6e6e6;
+  width: 214px;
+  border-radius: 6px;
+  margin: 0 15px 0 0;
+  color: #333333;
+}
+.checklist.inline {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+}
+.checklist:hover {
+  background: #f4ffe4;
+}
+.checklist .checklist-label {
+  display: block;
+  padding: 5px 10px;
+  line-height: 26px;
+}
+.checklist .checklist-label.center {
+  text-align: center;
+}
+.checklist .checklist-label:after {
+  content: "▾";
+  font-size: 1.5em;
+  float: right;
+  color: #aaaaaa;
+}
+.checklist .checklist-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  width: 100%;
+  background: #fafafa;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background: white;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  z-index: 200;
+}
+.checklist .checklist-options li {
+  margin: 0px;
+  padding: 5px 10px;
+  display: block;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  list-style-type: none;
+  padding: 7px 10px;
+  color: #666666;
+  line-height: 20px;
+  position: relative;
+}
+.checklist .checklist-options li label {
+  cursor: pointer;
+}
+.checklist .checklist-options li label * {
+  vertical-align: middle;
+}
+.checklist .checklist-options li label input {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin-top: 0;
+  margin-right: 8px;
+}
+.checklist .checklist-options li b {
+  float: right;
+  font-size: 11px;
+  font-weight: normal;
+}
+.checklist .checklist-options li:hover {
+  background: #f4ffe4 !important;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+.checklist .checklist-options li.disabled,
+.checklist .checklist-options li.disabled {
+  background-color: #fefefe !important;
+  color: #cccccc !important;
+  cursor: default;
+}
+.checklist .checklist-options li.empty-holder {
+  background-color: #fefefe !important;
+  display: none;
+  cursor: default;
+}
+.checklist .checklist-options li {
+  position: relative;
+  padding-left: 30px;
+}
+.checklist .checklist-options li.selected {
+  background-color: ivory;
+}
+.checklist .checklist-options li.selected:before {
+  content: "✔";
+  position: absolute;
+  left: 15px;
+}
+.checklist .checklist-options.center li {
+  padding-right: 30px;
+  text-align: center;
+}
+.checklist .hide {
+  display: none;
+}
+.checklist.quantity li {
+  padding-right: 30px;
+  text-align: center;
+}
+.checklist-options.hide-disabled li[disabled] {
+  display: none;
+}
+.checklist-options.hide-disabled li.disabled {
+  display: none;
+}
+.checklist-options.hide-disabled.empty li.empty-holder {
+  display: block;
+}
+.checklist.selected-honeydew li.selected {
+  background-color: honeydew;
+}
+.checklist.selected-ivory li.selected {
+  background-color: ivory;
+}
+.checklist.selected-azure li.selected {
+  background-color: azure;
+}
+.checklist.selected-aliceblue li.selected {
+  background-color: aliceblue;
+}
+.checklist.selected-lavenderblush li.selected {
+  background-color: lavenderblush;
+}
+.checklist.selected-oldlace li.selected {
+  background-color: oldlace;
+}
+.checklist.selected-floralwhite li.selected {
+  background-color: floralwhite;
+}

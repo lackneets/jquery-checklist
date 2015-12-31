@@ -1,0 +1,172 @@
+/* 
+    jquery-Checklist v 0.1.0 - an simple checklist in dropdown
+        2014 Lackneets Chang 
+
+        lackneets@gmail.com
+        lackneets.tw
+ */
+
+.checklist{
+	background-color: #FFF;
+	font-size: 13px;
+	border: 1px solid red;
+	width: 200px;
+	cursor: pointer;
+	position: relative;
+	border: 1px solid #e6e6e6;
+	width: 214px;
+	border-radius: 6px;
+	margin: 0 15px 0 0;
+
+	color: #333;
+
+	&.inline{
+		display: inline-block;
+		margin-right:10px; 
+		vertical-align: top;
+	}
+
+	&:hover{
+		background: #F4FFE4;
+	}
+
+	.checklist-label{
+		display: block;
+		padding: 5px 10px;
+		line-height: 26px;
+		&.center{
+			text-align: center;
+		}
+		&:after{
+			content: "▾";
+			font-size: 1.5em;
+			float: right;
+			color: #AAA;
+		}
+	}
+	.checklist-options{
+		position: absolute;
+		display: block;
+		top:100%;
+		width: 100%;
+		background: #FAFAFA;
+		margin:0px; padding: 0px;
+		box-sizing: border-box;
+		padding: 10px 0;
+		border-bottom-right-radius: 6px;
+		border-bottom-left-radius: 6px;
+		background: #fff;
+		border: 1px solid #eee;
+		box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+
+		z-index: 200;
+
+		li{
+			margin: 0px;
+			padding: 5px 10px;
+			display: block;
+			border-top: 1px solid transparent;
+			border-bottom: 1px solid transparent;
+			list-style-type: none;
+			padding: 7px 10px;
+			color: #666;
+			line-height: 20px;
+			position: relative;
+
+			label{ 
+				//line-height: 16px;
+				cursor: pointer; 
+				*{ vertical-align: middle;}
+				input{
+					cursor: pointer; 
+					height: 15px;
+					width: 15px;
+					margin-top: 0;
+					margin-right: 8px;					
+				}
+			}
+
+			b{ float: right; font-size: 11px; font-weight: normal;}
+
+			&:hover{
+				background: #F4FFE4 !important;
+				border-top: 1px solid #EFEFEF;
+				border-bottom: 1px solid #EFEFEF;
+			}
+			&.disabled, &.disabled{
+				background-color: #FEFEFE !important;
+				color: #CCC !important;
+				cursor: default;
+			}
+			&.empty-holder{
+				background-color: #FEFEFE !important;
+				//color: #CCC !important;
+				//font-weight: bold;
+				display: none;
+				cursor: default;
+			}
+		}
+		//&.multiple{
+			li{
+				position: relative;
+				padding-left: 30px;
+				&.selected{
+					background-color: #FFFFF0;
+					//font-weight: bold;
+					&:before{ 
+						content: "✔"; 
+						position: absolute;
+						left: 15px;
+					}
+				}
+			}
+		//}
+
+		&.center{
+			li{ 
+				padding-right: 30px;
+				text-align: center;
+			}
+		}
+	}
+	.hide{
+		display: none;
+	}
+}
+.checklist.quantity{
+	li{ 
+		padding-right: 30px;
+		text-align: center;
+	}
+}
+
+.checklist-options.hide-disabled{
+	li[disabled]{ display: none; }
+	li.disabled{ display: none; }
+	&.empty li.empty-holder{ display: block; }
+}
+
+// Colurful
+.checklist{
+	&.selected-honeydew{ // 淺綠
+		li.selected{ background-color: #F0FFF0; }
+	}
+	&.selected-ivory{ //象牙色 (淺米黃)
+		li.selected{ background-color: #FFFFF0; }
+	}
+	&.selected-azure{ //淺水藍
+		li.selected{ background-color: #F0FFFF; }
+	}
+	&.selected-aliceblue{ //淺天空藍
+		li.selected{ background-color: #F0F8FF; }
+	}
+	&.selected-lavenderblush{ //薰衣草淺紅
+		li.selected{ background-color: #FFF0F5; }
+	}
+	&.selected-oldlace{
+		li.selected{ background-color: #FDF5E6; }
+	}
+	&.selected-floralwhite{
+		li.selected{ background-color: #FFFAF0; }
+	}
+}
